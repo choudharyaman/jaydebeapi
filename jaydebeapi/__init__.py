@@ -183,7 +183,7 @@ def _jdbc_connect_jpype(jclassname, jars, libs, props, *driver_args):
 
     if props is not None:
         jprops = jpype.java.util.Properties()
-        for k, v in props.iteritems():
+        for k, v in props.items():
             jprops.put(k, v)
         return jpype.java.sql.DriverManager.getConnection(driver_args[0], jprops)
 
